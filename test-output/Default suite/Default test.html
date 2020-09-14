@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 14 16:49:04 IST 2020</td>
+<td>Started on:</td><td>Mon Sep 14 17:07:15 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>84 seconds (84587 ms)</td>
+<tr><td>Total time:</td><td>80 seconds (80119 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,10 +76,10 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.qa.ndtv.test.weather.TemperatureTest.testTemperature()'><b>testTemperature</b><br>Test class: com.qa.ndtv.test.weather.TemperatureTest<br>Parameters: Monteswar, 0.0, 0.0<br/>
-<a href="#Output-554073819" onClick='toggleBox("Output-554073819", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-112599439" onClick='toggleBox("Output-112599439", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-554073819" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-554073819">
+<a href="#Output-112599439" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-112599439">
 Open ndtv page in browser and navigate to weather page<br/>
 Get all the cities listed in the dropdown<br/>
 Validate if Monteswar present in the list of avaliable cities<br/>
@@ -106,8 +106,8 @@ Validate if Monteswar present in the list of avaliable cities<br/>
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-</pre></div><a href='#' onClick='toggleBox("stack-trace554073819", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace554073819'><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace112599439", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace112599439'><pre>java.lang.AssertionError: did not expect to find [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
 	at org.testng.Assert.assertTrue(Assert.java:43)
@@ -129,26 +129,34 @@ Validate if Monteswar present in the list of avaliable cities<br/>
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>12</td>
+<td>14</td>
 <td>com.qa.ndtv.test.weather.TemperatureTest@3712b94</td></tr>
 <tr>
 <td title='com.qa.ndtv.test.weather.TemperatureTest.testTemperature()'><b>testTemperature</b><br>Test class: com.qa.ndtv.test.weather.TemperatureTest<br>Parameters: Kolkata, 5.0, 5.0<br/>
-<a href="#Output-2086548833" onClick='toggleBox("Output-2086548833", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1240919530" onClick='toggleBox("Output-1240919530", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2086548833" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2086548833">
+<a href="#Output-1240919530" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1240919530">
 Open ndtv page in browser and navigate to weather page<br/>
 Get all the cities listed in the dropdown<br/>
 Validate if Kolkata present in the list of avaliable cities<br/>
 Enter the Kolkata and get the weather details<br/>
 Get the tempature in degrees and farenheit unit of the selected city<br/>
+Tempareture of the city in degree as double unit 30.0<br/>
+Tempareture of the city in farenheit as double unit 86.0<br/>
+Trigger api response to get the temprature from reponse<br/>
+The temperature received from the api response is 306.15 in pascal unit<br/>
+Coverted temperature received from api response to degress is 33.0<br/>
+Coverted temperature received from api response to farenheit is 91.4<br/>
+Verify temerature for degrees received in ui 30.0 along with the tempreature received in api response 33.0 is falling under permissable variance of 5.0<br/>
+Verify temerature for farenheit received in ui 86.0 along with the tempreature received in api response 91.4 is falling under permissable variance of 5.0<br/>
 </div>
 </td>
-<td><div><pre>java.lang.NumberFormatException: empty String
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
-	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.lang.Double.parseDouble(Double.java:538)
-	at com.qa.ndtv.test.weather.TemperatureTest.testTemperature(TemperatureTest.java:48)
+<td><div><pre>java.lang.AssertionError: Temperature of weather in ui 86.0 in farenheit is not within permissable range of 5.0 with the temperature in api 91.4 did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at com.qa.ndtv.test.weather.TemperatureTest.testTemperature(TemperatureTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -164,12 +172,12 @@ Get the tempature in degrees and farenheit unit of the selected city<br/>
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2086548833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2086548833'><pre>java.lang.NumberFormatException: empty String
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
-	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.lang.Double.parseDouble(Double.java:538)
-	at com.qa.ndtv.test.weather.TemperatureTest.testTemperature(TemperatureTest.java:48)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1240919530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1240919530'><pre>java.lang.AssertionError: Temperature of weather in ui 86.0 in farenheit is not within permissable range of 5.0 with the temperature in api 91.4 did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at com.qa.ndtv.test.weather.TemperatureTest.testTemperature(TemperatureTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -186,7 +194,7 @@ Get the tempature in degrees and farenheit unit of the selected city<br/>
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>17</td>
+<td>28</td>
 <td>com.qa.ndtv.test.weather.TemperatureTest@3712b94</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -198,10 +206,10 @@ Get the tempature in degrees and farenheit unit of the selected city<br/>
 </tr>
 <tr>
 <td title='com.qa.ndtv.test.weather.TemperatureTest.testTemperature()'><b>testTemperature</b><br>Test class: com.qa.ndtv.test.weather.TemperatureTest<br>Parameters: Bengaluru, 5.0, 10.0<br/>
-<a href="#Output-1467152053" onClick='toggleBox("Output-1467152053", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1375475394" onClick='toggleBox("Output-1375475394", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1467152053" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1467152053">
+<a href="#Output-1375475394" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1375475394">
 Open ndtv page in browser and navigate to weather page<br/>
 Get all the cities listed in the dropdown<br/>
 Validate if Bengaluru present in the list of avaliable cities<br/>
@@ -210,15 +218,15 @@ Get the tempature in degrees and farenheit unit of the selected city<br/>
 Tempareture of the city in degree as double unit 24.0<br/>
 Tempareture of the city in farenheit as double unit 75.0<br/>
 Trigger api response to get the temprature from reponse<br/>
-The temperature received from the api response is 299.65 in pascal unit<br/>
-Coverted temperature received from api response to degress is 26.5<br/>
-Coverted temperature received from api response to farenheit is 79.7<br/>
-Verify temerature for degrees received in ui 24.0 along with the tempreature received in api response 26.5 is falling under permissable variance of 5.0<br/>
-Verify temerature for farenheit received in ui 75.0 along with the tempreature received in api response 79.7 is falling under permissable variance of 10.0<br/>
+The temperature received from the api response is 299.64 in pascal unit<br/>
+Coverted temperature received from api response to degress is 26.49000000000001<br/>
+Coverted temperature received from api response to farenheit is 79.68200000000002<br/>
+Verify temerature for degrees received in ui 24.0 along with the tempreature received in api response 26.49000000000001 is falling under permissable variance of 5.0<br/>
+Verify temerature for farenheit received in ui 75.0 along with the tempreature received in api response 79.68200000000002 is falling under permissable variance of 10.0<br/>
 </div>
 </td>
 <td></td>
-<td>28</td>
+<td>31</td>
 <td>com.qa.ndtv.test.weather.TemperatureTest@3712b94</td></tr>
 </table><p>
 </body>

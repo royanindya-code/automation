@@ -179,11 +179,11 @@
                   </a> <!-- testTemperature(Kolkata, 5.0, 5.0) -->
                   <span class="method-name">testTemperature</span>
                   <span class="parameters">(Kolkata, 5.0, 5.0)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: empty String
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
-	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.lang.Double.parseDouble(Double.java:538)
-	at com.qa.ndtv.test.weather.TemperatureTest.testTemperature(TemperatureTest.java:48)
+                  <div class="stack-trace">java.lang.AssertionError: Temperature of weather in ui 86.0 in farenheit is not within permissable range of 5.0 with the temperature in api 91.4 did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at com.qa.ndtv.test.weather.TemperatureTest.testTemperature(TemperatureTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -224,7 +224,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/_0/8f9ffwfd76gdhzlbdpdd9yjw001475/T/testng-eclipse-2056526537/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/_0/8f9ffwfd76gdhzlbdpdd9yjw001475/T/testng-eclipse--350511320/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -277,20 +277,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testTemperature')
 data.setCell(0, 2, 'com.qa.ndtv.test.weather.TemperatureTest')
-data.setCell(0, 3, 28818);
+data.setCell(0, 3, 31138);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testTemperature')
 data.setCell(1, 2, 'com.qa.ndtv.test.weather.TemperatureTest')
-data.setCell(1, 3, 17591);
+data.setCell(1, 3, 28516);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testTemperature')
 data.setCell(2, 2, 'com.qa.ndtv.test.weather.TemperatureTest')
-data.setCell(2, 3, 12221);
+data.setCell(2, 3, 14536);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -312,11 +312,11 @@ return data;
                 <span class="reporter-method-output">Tempareture of the city in degree as double unit 24.0</span>
                 <span class="reporter-method-output">Tempareture of the city in farenheit as double unit 75.0</span>
                 <span class="reporter-method-output">Trigger api response to get the temprature from reponse</span>
-                <span class="reporter-method-output">The temperature received from the api response is 299.65 in pascal unit</span>
-                <span class="reporter-method-output">Coverted temperature received from api response to degress is 26.5</span>
-                <span class="reporter-method-output">Coverted temperature received from api response to farenheit is 79.7</span>
-                <span class="reporter-method-output">Verify temerature for degrees received in ui 24.0 along with the tempreature received in api response 26.5 is falling under permissable variance of 5.0</span>
-                <span class="reporter-method-output">Verify temerature for farenheit received in ui 75.0 along with the tempreature received in api response 79.7 is falling under permissable variance of 10.0</span>
+                <span class="reporter-method-output">The temperature received from the api response is 299.64 in pascal unit</span>
+                <span class="reporter-method-output">Coverted temperature received from api response to degress is 26.49000000000001</span>
+                <span class="reporter-method-output">Coverted temperature received from api response to farenheit is 79.68200000000002</span>
+                <span class="reporter-method-output">Verify temerature for degrees received in ui 24.0 along with the tempreature received in api response 26.49000000000001 is falling under permissable variance of 5.0</span>
+                <span class="reporter-method-output">Verify temerature for farenheit received in ui 75.0 along with the tempreature received in api response 79.68200000000002 is falling under permissable variance of 10.0</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -335,6 +335,14 @@ return data;
                 <span class="reporter-method-output">Validate if Kolkata present in the list of avaliable cities</span>
                 <span class="reporter-method-output">Enter the Kolkata and get the weather details</span>
                 <span class="reporter-method-output">Get the tempature in degrees and farenheit unit of the selected city</span>
+                <span class="reporter-method-output">Tempareture of the city in degree as double unit 30.0</span>
+                <span class="reporter-method-output">Tempareture of the city in farenheit as double unit 86.0</span>
+                <span class="reporter-method-output">Trigger api response to get the temprature from reponse</span>
+                <span class="reporter-method-output">The temperature received from the api response is 306.15 in pascal unit</span>
+                <span class="reporter-method-output">Coverted temperature received from api response to degress is 33.0</span>
+                <span class="reporter-method-output">Coverted temperature received from api response to farenheit is 91.4</span>
+                <span class="reporter-method-output">Verify temerature for degrees received in ui 30.0 along with the tempreature received in api response 33.0 is falling under permissable variance of 5.0</span>
+                <span class="reporter-method-output">Verify temerature for farenheit received in ui 86.0 along with the tempreature received in api response 91.4 is falling under permissable variance of 5.0</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -359,43 +367,43 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">customBeforeMethod(public void com.qa.ndtv.test.weather.TemperatureTest.testTemperature(java.lang.String,double,double)...)</span>
-                <span class="method-start">757 ms</span>
+                <span class="method-start">874 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">customBeforeMethod(public void com.qa.ndtv.test.weather.TemperatureTest.testTemperature(java.lang.String,double,double)...)</span>
-                <span class="method-start">757 ms</span>
+                <span class="method-start">874 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">customBeforeMethod(public void com.qa.ndtv.test.weather.TemperatureTest.testTemperature(java.lang.String,double,double)...)</span>
-                <span class="method-start">760 ms</span>
+                <span class="method-start">874 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testTemperature(Kolkata, 5.0, 5.0)</span>
-                <span class="method-start">55193 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testTemperature(Bengaluru, 5.0, 10.0)</span>
-                <span class="method-start">55362 ms</span>
+                <span class="method-start">48448 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testTemperature(Monteswar, 0.0, 0.0)</span>
-                <span class="method-start">57964 ms</span>
+                <span class="method-start">48448 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testTemperature(Kolkata, 5.0, 5.0)</span>
+                <span class="method-start">51070 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">70192 ms</span>
+                <span class="method-start">62996 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">72786 ms</span>
+                <span class="method-start">79589 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">84182 ms</span>
+                <span class="method-start">79667 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
