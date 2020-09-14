@@ -1,0 +1,7 @@
+Weather_place_Ele: XPATH=//div[@id='messages']//div//label
+Weather_place_input_ele: XPATH=//div[@id='messages']//div//label//input
+Search_city_ele: ID=searchBox
+Select_City_Ele: XPATH=//div[@id='messages']//div//label[@for='%s']//input
+Select_City_Temp_ele: XPATH=//div[@class='temperatureContainer']//following-sibling::div[contains(text(),'%s')]
+City_Name_Ele: XPATH=//div[@class='leaflet-popup-content-wrapper']//div//span[contains(text(), '%s')]
+City_Weather_Common_Ele: XPATH=//div[@class='leaflet-popup-content-wrapper']//span//b[contains(text(), '%s')]

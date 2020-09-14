@@ -1,0 +1,7 @@
+# Keep the element format like this to avoid runtime error
+Notification_Wrap: //div[@class='noti_wrap']
+NO_Thanks_ELE:  XPATH=//div//a[contains(text(), 'No Thanks')]
+Sub_Menu_Ele: XPATH=//div//a[@id='h_sub_menu']
+
+# Common Locators
+TopNav_Heading_Locator: XPATH=//div[@class='topnav_cont']//a[contains(text(),'%s')]
