@@ -17,6 +17,9 @@ Prerequisite -
 Run from eclipse - 
 1. Go to src/test/java/TemperatureTest.java and right click testTemperature method and run as testng. 
 2. Test will automatically run and after that check the results in test-output/emailable-report.html file.
+3. All the locators are declared in yaml file insied Resources/Locators folder.
+4. The excel test data sheet for variance is present inside Resources/TestData folder.
+5. All the drivers are present in Resources/Web folder.
 
 Limitation -
 1. Since I am using mac,only chromedriver and firefox driver for mac has been added to the framework.
